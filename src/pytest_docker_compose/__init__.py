@@ -146,7 +146,7 @@ class DockerComposePlugin:
                     "containers won't be used if there are already "
                     "containers running!"))
             current_containers = project.containers()
-            containers = project.up()
+            containers = current_containers
             if not set(current_containers) == set(containers):
                 warnings.warn(UserWarning(
                     "You used the '--use-running-containers' but "
